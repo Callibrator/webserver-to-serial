@@ -2,7 +2,6 @@
 
 <html>
 <body>
-{{sendn=whatvolume}}
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
  
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -14,14 +13,14 @@
 <div data-role="page" id="settings" data-theme="b" data-dialog="true">
 
 	<div data-role="header">
-		<h1>Light Volume Controler</h1>
+		<h1>Mr. {{display=name}}</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<form method="GET" action="/ledSignalResp.html">
                 <div data-role="collapsible-set" data-inset="false">
                
-
+		<input type=hidden name="name" value="{{display=name}}">
                 <input type="range" name="volume" id="slider" value="{{display=volume}}" min="0" max="255" data-highlight="true"/>
                 </div>
 		<input type="submit" value="Change Led Volume">
